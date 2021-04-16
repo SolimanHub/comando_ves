@@ -21,6 +21,14 @@ Si usted usa algún paquete diferente para visualizar sus ficheros  sustituya el
 
 
 
+### Instalar
+
+`git clone https://github.com/SolimanHub/comando_ves.git`
+
+`cd comando_ves`
+
+`sudo ln -s /direcion_completa/comando_ves/ves /usr/bin/ves`
+
 ### Forma de uso:
 
 `ves archivo.xyz`
