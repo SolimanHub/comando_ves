@@ -11,11 +11,13 @@ El comando ves nos permitirá ejecutar un solo comando con diferentes formatos d
 
 Archivos configurados en "ves" y paquetes utilizados para su funcionamiento:
 
-Entre paréntesis esta el nombre del paquete o programa utilizado para visualizar dicho fichero
+    Entre paréntesis esta el nombre del paquete o programa utilizado para visualizar dicho fichero
 
 - PDF (evince)
-- Imágenes (ristretto)
+- jpg (ristretto)
 - Texto/plano (typora) este paquete fue elegido por ser un excelente editor de Markdown
+- svg (inkscape)
+- xcf (gim)
 
 Si usted usa algún paquete diferente para visualizar sus ficheros  sustituya el nombre mencionado en la lista anterior por el nombre de su  paquete.
 

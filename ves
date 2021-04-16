@@ -8,12 +8,32 @@ tipo=$(file --mime-type "$1" | cut -d ":" -f 2 | cut -d " " -f 2)
 
 case "$tipo" in
 
+  "inode/directory")
+    cd "$1"
+    ;;
+
+  "image/svg+xml")
+    ristretto "$1" &
+    ;;
+
   "application/pdf")
     evince "$1" &
     ;;
 
   "image/jpeg")
     ristretto "$1" &
+    ;;
+
+  "image/png")
+    ristretto "$1" &
+    ;;
+
+  "image/x-xcf")
+    gimp "$1" &
+    ;;
+
+  "image/svg+xml")
+    inkscape "$1" &
     ;;
 
   "text/plain")
