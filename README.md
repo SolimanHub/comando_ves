@@ -21,7 +21,15 @@ Archivos configurados en "ves" y paquetes utilizados para su funcionamiento:
 
 Si usted usa algún paquete diferente para visualizar sus ficheros  sustituya el nombre mencionado en la lista anterior por el nombre de su  paquete.
 
+### Archivos comprimidos
 
+Con el comando `ves` también se puede descomprimir distintos tipos de ficheros, a continuación la lista de formatos aceptados:
+
+- .tar
+- .tar.xz
+- .tar.gz
+- .tar.z
+- .tgz
 
 ### Instalar
 

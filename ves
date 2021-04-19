@@ -8,6 +8,42 @@ tipo=$(file --mime-type "$1" | cut -d ":" -f 2 | cut -d " " -f 2)
 
 case "$tipo" in
 
+  "application/zip")
+    echo "Archivo comprimido, ¿descomprimir aquí? S/N"
+    read respuesta
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    then
+    	unzip "$1"
+    fi
+    ;;
+
+  "application/gzip")
+    echo "Archivo comprimido, ¿descomprimir aquí? S/N"
+    read respuesta
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    then
+    	tar xvf "$1"
+    fi
+    ;;
+
+  "application/x-tar")
+    echo "Archivo comprimido, ¿descomprimir aquí? S/N"
+    read respuesta
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    then
+    	tar xvf "$1"
+    fi
+    ;;
+
+  "application/x-xz")
+    echo "Archivo comprimido, ¿descomprimir aquí? S/N"
+    read respuesta
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    then
+    	tar -Jxvf "$1"
+    fi
+    ;;
+
   "inode/directory")
     cd "$1"
     ;;
