@@ -30,6 +30,7 @@ Con el comando `ves` también se puede descomprimir distintos tipos de ficheros,
 - .tar.gz
 - .tar.z
 - .tgz
+- .zip
 
 ### Instalar
 
