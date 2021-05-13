@@ -45,7 +45,8 @@ case "$tipo" in
     ;;
 
   "inode/directory")
-    cd "$1"
+    echo "=== Este archivo es un directorio ==="
+    cd $1
     ;;
 
   "image/svg+xml")
@@ -73,9 +74,13 @@ case "$tipo" in
     ;;
 
   "text/plain")
-    typora "$1" &
+    nvim "$1"
     ;;
-  *)
+
+   "text/x-shellscript")
+    nvim "$1"
+    ;;
+ *)
     echo "Tipo de archivo no incluido aun"
     ;;
 
