@@ -8,6 +8,16 @@ tipo=$(file --mime-type "$1" | cut -d ":" -f 2 | cut -d " " -f 2)
 
 case "$tipo" in
 
+  "application/x-rar")
+    echo "Archivo comprimido, ¿descomprimir aquí? S/N"
+    read respuesta
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    then
+    	rar x "$1"
+    fi
+    ;;
+
+
   "application/zip")
     echo "Archivo comprimido, ¿descomprimir aquí? S/N"
     read respuesta
@@ -81,7 +91,7 @@ case "$tipo" in
     nvim "$1"
     ;;
  *)
-    echo "Tipo de archivo no incluido aun"
+    echo "Tipo de archivo $tipo no incluido aun"
     ;;
 
 esac
