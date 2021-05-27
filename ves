@@ -26,7 +26,6 @@ case "$tipo" in
     fi
     ;;
 
-
   "application/zip")
     echo "Archivo comprimido, ¿descomprimir aquí? S/N"
     read respuesta
@@ -65,7 +64,8 @@ case "$tipo" in
 
   "inode/directory")
     echo "=== Este archivo es un directorio ==="
-    cd $1
+    stat $1
+    du -sh $1
     ;;
 
   "image/svg+xml")
