@@ -1,7 +1,7 @@
 
-# ves
+# VESD
 
-VEs ver / vES escuchar
+VESD Ver / Escuchar / Descomprimir
 
 VES comando cuya finalidad es ahorrar la necesidad de recordar los distintos comando para abrir archivos de diferentes formatos, por ejemplo PDF, mp3, mp4, jpg, por mencionar algunos.
 
