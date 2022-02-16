@@ -11,7 +11,7 @@ case "$tipo" in
   "application/zstd")
     echo "Archivo instalable, ¿Desea instalar? S/N"
     read respuesta
-    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ] || [ -z $respuesta ]
     then
     	pacman -U "$1"
     fi
@@ -20,7 +20,7 @@ case "$tipo" in
   "application/x-rar")
     echo "Archivo comprimido, ¿descomprimir aquí? S/N"
     read respuesta
-    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ] || [ -z $respuesta ]
     then
     	rar x "$1"
     fi
@@ -29,7 +29,7 @@ case "$tipo" in
   "application/zip")
     echo "Archivo comprimido, ¿descomprimir aquí? S/N"
     read respuesta
-    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ] || [ -z $respuesta ]
     then
     	unzip "$1"
     fi
@@ -38,7 +38,7 @@ case "$tipo" in
   "application/gzip")
     echo "Archivo comprimido, ¿descomprimir aquí? S/N"
     read respuesta
-    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ] || [ -z $respuesta ]
     then
     	tar xvf "$1"
     fi
@@ -47,7 +47,7 @@ case "$tipo" in
   "application/x-tar")
     echo "Archivo comprimido, ¿descomprimir aquí? S/N"
     read respuesta
-    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ] || [ -z $respuesta ]
     then
     	tar xvf "$1"
     fi
@@ -56,7 +56,7 @@ case "$tipo" in
   "application/x-xz")
     echo "Archivo comprimido, ¿descomprimir aquí? S/N"
     read respuesta
-    if [ $respuesta = "S" ] || [ $respuesta = "s" ]
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ] || [ -z $respuesta ]
     then
     	tar -Jxvf "$1"
     fi
@@ -66,10 +66,6 @@ case "$tipo" in
     echo "=== Este archivo es un directorio ==="
     stat $1
     du -sh $1
-    ;;
-
-  "image/svg+xml")
-    ristretto "$1" &
     ;;
 
   "application/epub+zip")
@@ -108,4 +104,3 @@ case "$tipo" in
     ;;
 
 esac
-
