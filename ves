@@ -26,6 +26,15 @@ case "$tipo" in
     fi
     ;;
 
+  "application/x-bzip2")
+    echo "Archivo comprimido, ¿descomprimir aquí? S/N"
+    read respuesta
+    if [ $respuesta = "S" ] || [ $respuesta = "s" ] || [ -z $respuesta ]
+    then
+    	tar -xvf "$1"
+    fi
+    ;;
+
   "application/zip")
     echo "Archivo comprimido, ¿descomprimir aquí? S/N"
     read respuesta
